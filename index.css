@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white;
+    width: 1536px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 90%;
+    align-items: center;
+}
+
+.left-menu {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo1 {
+    color: black;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.logo2 {
+    color: black;
+    font-size: 36px;
+    margin-top: 1px;
+}
+
+.logo-clothing {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+.logo-accessories {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.search-wrapper i {
+    position: relative;
+    top: 20px;
+    right: 130px;
+    color: #999;
+    z-index: 2;
+
+}
+
+#search-box {
+    position: relative;
+    bottom: 10px;
+    right: 150px;
+    width: 130%;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+    z-index: 1;
+}
+
+#right-menu a i {
+    position: relative;
+    top: 10px;
+    right: 190px;
+    font-size: 25px;
+    align-items: center;
+}
+
+#cart-count {
+    position: relative;
+    top: 15px;
+    right: 160px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #009688;
+}
+
+.user-profile {
+    position: relative;
+    right: 90px;
+    bottom: 25px;
+    font-size: 30px;
+    align-items: center;
+
+}
+
+/* Style the navigation dots */
+.owl-dots {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  /* Style individual dot */
+  .owl-dot {
+    display: inline-block;
+    width: 10px; /* Adjust the dot width */
+    height: 10px; /* Adjust the dot height */
+    margin: 0 5px; /* Adjust the spacing between dots */
+    background-color: #333; /* Dot color when inactive */
+    border-radius: 50%; /* Make the dot round */
+    cursor: pointer;
+  }
+  
+  /* Style active dot */
+  .owl-dot.active {
+    background-color: #ff6600; /* Dot color when active */
+  }
+  
+
+
+
+
+
+
+
+
