@@ -120,24 +120,54 @@ header {
 /* Style the navigation dots */
 .owl-dots {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 10px;
+    margin-right: 10px;
   }
   
   /* Style individual dot */
   .owl-dot {
     display: inline-block;
-    width: 10px; /* Adjust the dot width */
-    height: 10px; /* Adjust the dot height */
-    margin: 0 5px; /* Adjust the spacing between dots */
-    background-color: #333; /* Dot color when inactive */
-    border-radius: 50%; /* Make the dot round */
+    width: 10px; 
+    height: 10px; 
+    margin: 0 5px; 
+    background-color: black; 
+    border-radius: 50%; 
     cursor: pointer;
   }
   
   /* Style active dot */
   .owl-dot.active {
-    background-color: #ff6600; /* Dot color when active */
+    background-color: #ff6600;
   }
+
+  section {
+    margin: 0px 120px;
+  }
+
+.section-heading {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card-container {
+    display: flex;
+
+    border: 1px solid red;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    width: 15%;
+    height: auto;
+    border: 1px solid black;
+    
+}
+
+
+
+
   
 
 
