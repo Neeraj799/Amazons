@@ -148,27 +148,46 @@ header {
 }
 
 @media (max-width: 768px) {
-    /* Adjust header height and padding for smaller screens */
     header {
         height: 60px;
     }
-
+  
     #navbar {
-        padding: 0 10px; /* You can adjust the padding as needed */
+        padding: 0 10px;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
     }
-
-    /* Adjust other styles for smaller screens as needed */
-    .logo1 {
+  
+    .left-menu {
+        display: none;
+    }
+  
+    .logo {
+        margin: 10px 0;
+    }
+  
+    .logo1, .logo2 {
         font-size: 28px;
     }
-
-    .logo2 {
-        font-size: 28px;
-    }
-
-    /* Example: Hide the user profile icon on smaller screens */
+  
     .user-profile {
         display: none;
+    }
+  
+   
+    .logo-clothing,
+    .logo-accessories {
+        margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    #search-box {
+        position: static;
+        width: 100%;
+        right: 0; 
+        padding: 10px;
     }
 }
 
@@ -178,12 +197,10 @@ main {
 }
 
 
-/* Style the navigation dots */
 .owl-dots {
     text-align: center;
   }
   
-  /* Style individual dot */
   .owl-dot {
     display: inline-block;
     width: 10px; 
@@ -319,22 +336,22 @@ footer div a {
 
 @media screen and (max-width: 768px) {
     footer {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text within each div */
-        padding: 4% 4%; /* Adjust padding for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4% 4%;
     }
 
     footer div {
-        margin-bottom: 30px; /* Add spacing between div elements */
+        margin-bottom: 30px;
     }
 
     footer div p {
-        font-size: 15px; /* Reduce font size for paragraphs */
+        font-size: 15px;
     }
 
     footer div a {
-        font-size: 14px; /* Reduce font size for links */
+        font-size: 14px;
     }
 }
 
@@ -392,8 +409,6 @@ footer div a {
     letter-spacing: 2px;
     color: #009688;
   }
-  
-  /*============== Product Page Style Start ==================================*/
   
   #product {
     max-width: 1200px;
@@ -506,10 +521,6 @@ footer div a {
       font-size: 14px;
     }
   }
-
-    /*============== Product Page Style End ==================================*/
-  
-  /*============== CheckOut Page Style Start ==================================*/
   
   #cart {
     margin: 4% 6%;
