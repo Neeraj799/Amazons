@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -11,10 +12,15 @@ html{
 
 header {
     background-color: white;
-    width: 1536px;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    top: 0;
+    z-index: 999;
+
 }
 
 #navbar {
@@ -23,6 +29,7 @@ header {
     background-color: white;
     width: 90%;
     align-items: center;
+    padding: 0 20px;
 }
 
 .left-menu {
@@ -32,6 +39,8 @@ header {
 }
 
 .logo {
+    position: relative;
+    left: 20px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -50,11 +59,18 @@ header {
 }
 
 .logo-clothing {
+    position: relative;
+    left: 20px;
     color: black;
     font-size: 17px;
     font-weight: 600;
     margin-left: 40px;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-clothing:hover {
+    color: lightblue;
 }
 
 
@@ -64,6 +80,16 @@ header {
     font-weight: 600;
     margin-left: 40px;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-accessories:hover {
+    color: lightblue;
+}
+
+.search-wrapper {
+    position: relative;
+    font-size: 15px;
 }
 
 .search-wrapper i {
@@ -79,7 +105,7 @@ header {
     position: relative;
     bottom: 10px;
     right: 150px;
-    width: 130%;
+    width: 150%;
     border: 1px solid rgb(245, 242, 242);
     background-color: rgb(245, 242, 242);
     box-sizing: border-box;
@@ -91,16 +117,20 @@ header {
 
 #right-menu a i {
     position: relative;
-    top: 10px;
-    right: 190px;
-    font-size: 25px;
+    top: 15px;
+    right: 150px;
+    font-size: 30px;
     align-items: center;
+}
+
+#cart-icon {
+    color: black;
 }
 
 #cart-count {
     position: relative;
-    top: 15px;
-    right: 160px;
+    top: 19px;
+    right: 117px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -110,60 +140,558 @@ header {
 
 .user-profile {
     position: relative;
-    right: 90px;
-    bottom: 25px;
-    font-size: 30px;
+    right: 70px;
+    bottom: 28px;
+    font-size: 35px;
     align-items: center;
 
 }
 
+@media (max-width: 768px) {
+    /* Adjust header height and padding for smaller screens */
+    header {
+        height: 60px;
+    }
+
+    #navbar {
+        padding: 0 10px; /* You can adjust the padding as needed */
+    }
+
+    /* Adjust other styles for smaller screens as needed */
+    .logo1 {
+        font-size: 28px;
+    }
+
+    .logo2 {
+        font-size: 28px;
+    }
+
+    /* Example: Hide the user profile icon on smaller screens */
+    .user-profile {
+        display: none;
+    }
+}
+
+main {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
 /* Style the navigation dots */
 .owl-dots {
     text-align: center;
-    margin-top: 10px;
-    margin-right: 10px;
   }
   
   /* Style individual dot */
   .owl-dot {
     display: inline-block;
     width: 10px; 
-    height: 10px; 
+    height: 10px;
     margin: 0 5px; 
-    background-color: black; 
+    background-color: #ccc; 
     border-radius: 50%; 
     cursor: pointer;
   }
-  
-  /* Style active dot */
+
   .owl-dot.active {
-    background-color: #ff6600;
+    background-color: black;
+    transform: scale(1.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   section {
-    margin: 0px 120px;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 0 20px;
   }
 
 .section-heading {
-    margin-top: 40px;
+    margin-top: 70px;
     font-size: 30px;
     font-weight: 600;
 }
 
 .card-container {
     display: flex;
-
-    border: 1px solid red;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+    gap: 20px;
 }
 
 .card {
-    display: flex;
-    width: 15%;
+    flex: 1;
+    width: 20%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
     height: auto;
-    border: 1px solid black;
+
+}
+
+.card h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.card h4 {
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.card h5 {
+    font-weight: 600;
+    color: #009688;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1300px) {
+    .card {
+        min-width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: calc(33.33% - 20px);
+    }
+}
+@media (max-width : 480px) {
+    .card {
+        min-width: 100%;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #1c1b1e;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4% 8%;
+    gap: 90px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
     
 }
+
+footer div p {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 7px 0px;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+footer div a {
+    color: white;
+    font-size: 15px;
+    padding: 7px 0px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text within each div */
+        padding: 4% 4%; /* Adjust padding for smaller screens */
+    }
+
+    footer div {
+        margin-bottom: 30px; /* Add spacing between div elements */
+    }
+
+    footer div p {
+        font-size: 15px; /* Reduce font size for paragraphs */
+    }
+
+    footer div a {
+        font-size: 14px; /* Reduce font size for links */
+    }
+}
+
+.section-heading {
+    margin-top: 100px;
+    margin-left: 70px;
+    color: rgb(27, 25, 25);
+  }
+  .card-conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4%;
+  }
+  .card {
+    width: 15%;
+    min-width: 200px;
+    height: auto;
+    margin: 30px 10px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  .card a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  .card .img img {
+    width: 100%;
+  }
+  .card .details {
+    padding-left: 10px;
+    margin: 10px auto;
+  }
+  .card .details h3 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(27, 25, 25);
+  }
+  .card .details h4 {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+  }
+  .card .details h5 {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #009688;
+  }
+  
+  /*============== Product Page Style Start ==================================*/
+  
+  #product {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left-column {
+    width: 40%;
+  }
+  .right-column {
+    width: 60%;
+    margin-top: 40px;
+    padding-left: 30px;
+  }
+  .left-column img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .product-description {
+    margin-bottom: 40px;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+  .product-description h4 {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+  }
+  .product-description h3 {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+  }
+  .product-description h3 span {
+    color: #009688;
+    font-weight: bold;
+  }
+  .product-description p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939e;
+  }
+  .product-preview .previewImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  .product-preview .previewImg img {
+    margin: 5px;
+    width: 15%;
+    height: 30%;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+  }
+  
+  
+  .btn button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .btn button:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  @media screen and (max-width: 768px) {
+    #product {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .left-column {
+      width: 100%;
+    }
+    .right-column {
+      width: 100%;
+      margin-top: 40px;
+      padding-left: 30px;
+    }
+    .left-column img {
+      margin-top: 30px;
+    }
+    .product-description h1 {
+      font-size: 34px;
+    }
+    .product-description h4 {
+      font-size: 14px;
+    }
+    .product-description h3 {
+      font-size: 17px;
+    }
+    .product-description p {
+      font-size: 14px;
+    }
+  }
+
+    /*============== Product Page Style End ==================================*/
+  
+  /*============== CheckOut Page Style Start ==================================*/
+  
+  #cart {
+    margin: 4% 6%;
+  }
+  #cart h1 {
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+  .cart-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left-side {
+    width: 52%;
+    margin-top: 60px;
+  }
+  .right-side {
+    width: 45%;
+    margin-top: 60px;
+  }
+  .left-side p {
+    color: rgb(27, 25, 25);
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+  .item1 {
+    display: flex;
+    width: 600px;
+    margin-top: 25px;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  .item1 img {
+    width: 80px;
+    height: 100px;
+    border-radius: 4px;
+  }
+  .item1 .detail {
+    padding-left: 15px;
+  }
+  .item1 .detail p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .total-amount {
+    width: 450px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 4px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  .total-amount h2 {
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  .total-amount p {
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  .total-amount p span {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .total-amount button {
+    font-size: 16px;
+    margin-top: 50px;
+    font-weight: 300;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .total-amount button:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  #edyoda-projects-logo {
+    width: 128px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+
+  @media screen and (max-width: 1024px) {
+    .item1 {
+      width: 450px;
+    }
+    .total-amount {
+      width: 350px;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+  }
+  @media screen and (max-width: 910px) {
+    .left-side {
+      width: 100%;
+      margin-top: 60px;
+    }
+    .right-side {
+      width: 100%;
+      margin-top: 60px;
+    }
+    .item {
+      width: 600px;
+    }
+    .total-amount {
+      width: 600px;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .item {
+      width: 350px;
+    }
+    .item .detail h1 {
+      font-size: 20px;
+    }
+    .item .detail p {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .item {
+      width: 325px;
+    }
+    .item .detail h1 {
+      font-size: 18px;
+    }
+    .total-amount {
+      width: 325px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .item {
+      width: 275px;
+    }
+    .item .detail h1 {
+      font-size: 16px;
+    }
+    .total-amount {
+      width: 275px;
+    }
+  }
+  
+  .order-confirm {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .order-confirm img {
+    height: 300px;
+  }
+  .order-confirm h2 {
+    margin-top: 60px;
+  }
+  .order-confirm p {
+    margin-top: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

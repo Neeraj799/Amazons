@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final project</title>
+    <link href="/index.css" rel="stylesheet">
+
+    <link href="/productdetails.html" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="left-menu">
+                <div>
+                    <a class="logo" href="/index.html">
+                        <span class="logo1"> SHOP </span>
+                        <span class="logo2"> LANE </span>
+                    </a>
+                </div>
+                <a class="logo-clothing" href="./index.html#clothing-section"> CLOTHING </a>
+                <a class="logo-accessories" href="./index.html#accessory-section"> ACCESSORIES </a>
+            </div>
+            <div class="search-wrapper"> 
+                <i class="fa fa-search"></i>
+                <input id="search-box" type="text" name="search" placeholder="Search for clothing and accessories">
+            </div>
+
+            <div id="right-menu">
+                <div id="cart-wrapper">
+                    <p id="cart-count">0</p>
+                    <a href="./checkout.html">
+                        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                    </a>   
+                </div>
+                <div class="user-profile">
+                <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </div>              
+        </nav>
+    </header>
+<section id="cart">
+    <h1>Checkout</h1>
+    <div class="cart-container">
+      <div class="left-side">
+        <p>Total Items: <span id="number-of-item"></span></p>
+        <div class="cart-items" id="cart-item-container"></div>
+      </div>
+      <div class="right-side">
+        <div class="total-amount">
+          <h2>Total Amount</h2>
+          <p>Total Amount: Rs <span id="total-amount"></span></p>
+          <a href="./orderconfirmation.html">
+            <button id="place-order">Place Order</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+  <script src="base.js"></script>
+
+</body>
+</html>
